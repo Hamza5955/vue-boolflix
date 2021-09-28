@@ -1,14 +1,15 @@
 <template>
   <div>
     <ul class="list-item">
-      <li class="list-cards">
-        <div class="card-info">Titolo: {{ info.title }}</div>
-        <div class="card-info">Titolo Originale: {{ info.original_title }}</div>
+      <li class="list-cardss">
+        <div class="card-info">Titolo: {{ infoTv.name }}</div>
         <div class="card-info">
-          Lingua:
-          <CountryFlag :country="info.original_language" />
+          Titolo Originale: {{ infoTv.original_title }}
         </div>
-        <div class="card-info">Voto: {{ info.vote_average }}</div>
+        <div class="card-info">
+          Lingua: <CountryFlag :country="infoTv.original_language" />
+        </div>
+        <div class="card-info">Voto: {{ infoTv.vote_average }}</div>
       </li>
     </ul>
   </div>
@@ -21,7 +22,7 @@ export default {
   components: {
     CountryFlag,
   },
-  props: ["movieList", "info"],
+  props: ["tvList", "infoTv"],
 };
 </script>
 

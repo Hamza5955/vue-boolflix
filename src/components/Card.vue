@@ -1,0 +1,30 @@
+<template>
+  <div>
+    <ul class="list-item">
+      <li class="list-cards">
+        <div class="card-info">Titolo: {{ info.title }}</div>
+        <div class="card-info">Titolo Originale: {{ info.original_title }}</div>
+        <div class="card-info">Lingua: {{ info.original_language }}</div>
+        <div class="card-info">Voto: {{ info.vote_average }}</div>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Card",
+  props: ["movieList", "info"],
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+.list-item {
+  background-color: white;
+}
+.card-info {
+  min-height: 100px;
+  padding-bottom: 10px;
+}
+</style>

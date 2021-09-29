@@ -57,7 +57,7 @@ export default {
   methods: {
     getInput(text) {
       this.inputText = text;
-      console.log(this.inputText);
+      //console.log(this.inputText);
       this.getList();
       this.getListTv();
     },
@@ -70,7 +70,7 @@ export default {
             (this.inputText ? "&query=" + this.inputText : "")
         )
         .then((res) => {
-          console.log(res.data.results);
+          //console.log(res.data.results);
           this.movieList = res.data.results;
         });
     },
@@ -83,7 +83,7 @@ export default {
             (this.inputText ? "&query=" + this.inputText : "")
         )
         .then((res) => {
-          console.log(res.data.results);
+          //console.log(res.data.results);
           this.tvList = res.data.results;
         });
     },
